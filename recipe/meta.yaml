@@ -1,0 +1,67 @@
+{% set name = "databroker" %}
+{% set version = "0.13.2" %}
+{% set sha256 = "f1a95ecf481f0015b3339d07276cd1efb2cbfb2a9aa0a2e68aee0d26d4947e42" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - attrs >=16.3.0
+    - boltons
+    - cytoolz
+    - doct
+    - h5py
+    - humanize
+    - jsonschema
+    - jinja2
+    - mongoquery
+    - numpy
+    - pandas
+    - pims
+    - pymongo
+    - python
+    - pytz
+    - pyyaml
+    - requests
+    - six
+    - tifffile
+    - tornado
+    - tzlocal
+    - ujson
+
+test:
+  imports:
+    - databroker
+    - databroker.core
+    - databroker.broker
+
+about:
+  home: https://github.com/NSLS-II/databroker
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'A unified interface to the various data sources at NSLS-II.'
+
+  description: 'A unified interface to the various data sources at NSLS-II.'
+  doc_url: http://nsls-ii.github.io/databroker/
+  dev_url: https://github.com/NSLS-II/databroker/
+
+extra:
+  recipe-maintainers:
+    - CJ-Wright
+    - conda-forge/event-model
