@@ -13,13 +13,15 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
+    - pytest
+    - pytest-runner
   run:
     - attrs >=16.3.0
     - boltons
@@ -45,10 +47,14 @@ requirements:
     - ujson
 
 test:
+  requires:
+    - pytest
   imports:
     - databroker
     - databroker.core
     - databroker.broker
+  commands:
+    - pytest --pyargs {{ name }}.tests
 
 about:
   home: https://github.com/NSLS-II/databroker
