@@ -48,6 +48,7 @@ requirements:
 
 test:
   requires:
+    - python
     - pytest
   imports:
     - databroker
