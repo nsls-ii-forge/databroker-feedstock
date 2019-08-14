@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/bluesky/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -17,13 +17,12 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
-    - pytest
-    - pytest-runner
   run:
     - attrs >=16.3.0
+    - blueksy
     - boltons
     - cytoolz
     - doct
@@ -58,7 +57,7 @@ test:
     - pytest --pyargs {{ name }}.tests
 
 about:
-  home: https://github.com/NSLS-II/databroker
+  home: https://github.com/bluesky/databroker
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -66,7 +65,7 @@ about:
 
   description: 'A unified interface to the various data sources at NSLS-II.'
   doc_url: http://nsls-ii.github.io/databroker/
-  dev_url: https://github.com/NSLS-II/databroker/
+  dev_url: https://github.com/bluesky/databroker/
 
 extra:
   recipe-maintainers:
