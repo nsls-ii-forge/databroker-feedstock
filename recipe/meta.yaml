@@ -46,15 +46,10 @@ requirements:
     - ujson
 
 test:
-  requires:
-    - python
-    - pytest
   imports:
     - databroker
     - databroker.core
     - databroker.broker
-  commands:
-    - pytest --pyargs {{ name }}.tests
 
 about:
   home: https://github.com/bluesky/databroker

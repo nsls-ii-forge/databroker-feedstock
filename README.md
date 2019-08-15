@@ -1,7 +1,7 @@
 About databroker
 ================
 
-Home: https://github.com/NSLS-II/databroker
+Home: https://github.com/bluesky/databroker
 
 Package license: BSD-3-Clause
 
