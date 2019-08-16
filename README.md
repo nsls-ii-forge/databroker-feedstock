@@ -1,7 +1,7 @@
 About databroker
 ================
 
-Home: https://github.com/NSLS-II/databroker
+Home: http://blueskyproject.io
 
 Package license: BSD-3-Clause
 
@@ -80,6 +80,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@CJ-Wright](https://github.com/CJ-Wright/)
 * [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
 
