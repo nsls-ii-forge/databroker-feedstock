@@ -1,19 +1,18 @@
 {% set name = "databroker" %}
 {% set version = "0.13.2" %}
-{% set sha256 = "763e41f4707c27a3d3091d7c0fe9f5c32ef068a280134258bb3af76bfd131d7f" %}
+{% set sha256 = "09d240b14a1a5da2685d0af079be450925cdb0ac1443723af7fac9032c0db4a9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -51,17 +50,15 @@ test:
     - databroker.broker
 
 about:
-  home: https://github.com/NSLS-II/databroker
+  home: http://blueskyproject.io
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'A unified interface to the various data sources at NSLS-II.'
-
   description: 'A unified interface to the various data sources at NSLS-II.'
-  doc_url: http://nsls-ii.github.io/databroker/
-  dev_url: https://github.com/NSLS-II/databroker/
+  doc_url: http://blueskyproject.io/databroker
+  dev_url: https://github.com/bluesky/databroker
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - conda-forge/event-model
