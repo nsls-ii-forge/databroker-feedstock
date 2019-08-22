@@ -58,7 +58,3 @@ about:
   description: 'A unified interface to the various data sources at NSLS-II.'
   doc_url: http://blueskyproject.io/databroker
   dev_url: https://github.com/bluesky/databroker
-
-extra:
-  recipe-maintainers:
-    - conda-forge/event-model
