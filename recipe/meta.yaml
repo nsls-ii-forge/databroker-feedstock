@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -24,10 +24,11 @@ requirements:
     - boltons
     - cytoolz
     - doct
+    - glueviz
     - h5py
     - humanize
-    - jsonschema
     - jinja2
+    - jsonschema
     - mongoquery
     - numpy
     - pandas
