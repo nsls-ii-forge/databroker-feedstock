@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "0.13.3" %}
-{% set sha256 = "53c13a7843afeaf34ac9913330afaaaee30f13f869b652e04615772e090c039a" %}
+{% set version = "1.0.0a2" %}
+{% set sha256 = "fd324e13c2cf47908cac70522e8c0ed2666127efc2524750bfe5d06a301a91d1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -20,35 +20,47 @@ requirements:
     - python
     - pip
   run:
-    - attrs >=16.3.0
+    - python
     - boltons
-    - cytoolz
+    - dask[bag]
     - doct
-    - glueviz
-    - h5py
+    - event-model >=1.11.1
     - humanize
+    - intake >=0.5.2
+    - intake-xarray >=0.3.1
     - jinja2
     - jsonschema
     - mongoquery
+    - msgpack
+    - msgpack-numpy
     - numpy
     - pandas
     - pims
     - pymongo
-    - python
     - pytz
     - pyyaml
     - requests
     - six
+    - suitcase-mongo
+    - suitcase-msgpack
     - tifffile
-    - tornado
+    - toolz
     - tzlocal
-    - ujson
+    - xarray
 
 test:
   imports:
     - databroker
-    - databroker.core
-    - databroker.broker
+    - databroker._drivers
+    - databroker.assets
+    - databroker.assets.readers
+    - databroker.assets.tests
+    - databroker.eventsource
+    - databroker.eventsource.tests
+    - databroker.headersource
+    - databroker.service
+    - databroker.tests
+    - databroker.tests.test_v2
 
 about:
   home: http://blueskyproject.io
