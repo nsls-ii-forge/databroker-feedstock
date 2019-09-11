@@ -22,7 +22,7 @@ requirements:
   run:
     - python
     - boltons
-    - dask[bag]
+    - dask
     - doct
     - event-model >=1.11.1
     - humanize
