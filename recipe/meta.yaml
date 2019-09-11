@@ -31,8 +31,8 @@ requirements:
     - jinja2
     - jsonschema
     - mongoquery
-    - msgpack
     - msgpack-numpy
+    - msgpack-python
     - numpy
     - pandas
     - pims
