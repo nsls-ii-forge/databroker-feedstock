@@ -27,7 +27,6 @@ requirements:
     - event-model >=1.11.1
     - humanize
     - intake >=0.5.2
-    - intake-xarray >=0.3.1
     - jinja2
     - jsonschema
     - mongoquery
@@ -47,6 +46,7 @@ requirements:
     - toolz
     - tzlocal
     - xarray
+    - zarr
 
 test:
   imports:
