@@ -61,6 +61,15 @@ test:
     - databroker.service
     - databroker.tests
     - databroker.tests.test_v2
+  commands:
+    - intake drivers list
+    - intake drivers enable driver bluesky-event-stream
+    - intake drivers enable driver bluesky-jsonl-catalog
+    - intake drivers enable driver bluesky-mongo-embedded-catalog
+    - intake drivers enable driver bluesky-mongo-normalized-catalog
+    - intake drivers enable driver bluesky-msgpack-catalog
+    - intake drivers enable driver bluesky-run
+    - intake drivers enable driver databroker-remote-xarray
 
 about:
   home: http://blueskyproject.io
