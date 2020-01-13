@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "1.0.0b4" %}
-{% set sha256 = "177231009cc56ed339ff0a664e3ff976b49e66ebb39d35351fae3cf16a507824" %}
+{% set version = "1.0.0b5" %}
+{% set sha256 = "eac8e6353a83c1fe733e574c6ec802bceadab89f121b7e42638116a8e285a303" %}
 
 package:
   name: {{ name|lower }}
@@ -42,7 +42,7 @@ requirements:
     - six
     - suitcase-mongo
     - suitcase-msgpack
-    - tifffile
+    - tifffile !=2019.7.26.2
     - toolz
     - tzlocal
     - xarray
