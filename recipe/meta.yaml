@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "1.0.0b6" %}
-{% set sha256 = "52a92737932533af7d7613a4b68c33ab680653f6c9b80e5d79bc0025054f82e9" %}
+{% set version = "1.0.0b7" %}
+{% set sha256 = "5886b24836ee5b83141db7344f4f626b9085226c399300675658727f02b00ae2" %}
 
 package:
   name: {{ name|lower }}
@@ -22,6 +22,7 @@ requirements:
   run:
     - python
     - boltons
+    - cachetools
     - dask
     - doct
     - event-model >=1.13.0b4
