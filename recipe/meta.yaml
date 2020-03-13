@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "1.0.0b9" %}
-{% set sha256 = "3414531da95b044ef72913a202e31d6959767e37dbbaa9ebc92969c72242ce3b" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "f818193d65a0327fb4550da4f02e9d9276b6c47d277598900bf99ebfa6d414bf" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
     - cachetools
     - dask
     - doct
-    - event-model >=1.13.0b4
+    - event-model >=1.14.0
     - humanize
     - intake >=0.5.2
     - jinja2
