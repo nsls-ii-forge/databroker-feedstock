@@ -62,6 +62,8 @@ test:
     - databroker.service
     - databroker.tests
     - databroker.tests.test_v2
+  commands:
+    - intake drivers list 2>&1 | grep bluesky  # [not win]
 
 about:
   home: http://blueskyproject.io
