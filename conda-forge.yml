@@ -13,4 +13,4 @@ provider:
   linux: azure
   osx: azure
   win: azure
-upload_on_branch: v1.0.x
+upload_on_branch: master
