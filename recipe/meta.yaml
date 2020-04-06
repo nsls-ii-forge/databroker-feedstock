@@ -1,6 +1,6 @@
 {% set name = "databroker" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "f818193d65a0327fb4550da4f02e9d9276b6c47d277598900bf99ebfa6d414bf" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "45cd9aa4b165f0c1695c3e5857037749b5e369d1c28aac3772ad5bc9bbdb7f39" %}
 
 package:
   name: {{ name|lower }}
@@ -27,7 +27,7 @@ requirements:
     - doct
     - event-model >=1.14.0
     - humanize
-    - intake >=0.5.2
+    - intake >=0.5.5
     - jinja2
     - jsonschema
     - mongoquery
