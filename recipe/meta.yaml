@@ -21,11 +21,12 @@ requirements:
     - pip
   run:
     - python
+    - bluesky-live >=0.0.6
     - boltons
     - cachetools
     - dask
     - doct
-    - event-model >=1.14.0
+    - event-model >=1.16.0
     - humanize
     - intake >=0.5.5
     - jinja2
